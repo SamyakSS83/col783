@@ -1,0 +1,194 @@
+COL7(6)83 Assignment 2
+Due date: 5 October, 2025
+
+This assignment deals with frequency-domain filtering, denoising, and deconvolution. All tasks have
+to be implemented yourself by working with the array of image pixels, unless otherwise specified in
+the problem. You are permitted to perform all tasks using intensity images.
+I have provided some standard test images used in image processing. You may use these for your
+results.
+
+Part 1
+1. When zooming an image to a larger size, one only needs to perform interpolation, but when
+shrinking it to a smaller size, one also needs low-pass filtering in order to avoid aliasing. Let us
+study this in detail. Assume the original 𝑀 × 𝑁 image 𝑓 was sampled with a spacing of Δ𝑋
+samples per unit length in both directions, hence covers a physical size of 𝑋 = 𝑀Δ𝑋 by
+𝑌 = 𝑁Δ𝑋 units. Scaling the image size by a factor 𝑘 ∈ 𝑅 corresponds to resampling with a
+′
+
+spacing of Δ𝑋 = Δ𝑋 / 𝑘; the case 𝑘 > 1 corresponds to zooming, 0 < 𝑘 < 1 corresponds
+to shrinking.
+′
+
+a. Suppose we obtain the zoomed/shrunk image 𝑓 simply by interpolating 𝑓 at the new
+′
+
+sample locations. What is the Fourier transform of 𝑓 in terms of the Fourier transform of
+′
+
+𝑓? Here both 𝑓 and 𝑓 should be treated as sampled signals i.e. sums of impulses.
+b. In terms of the given parameters, particularly 𝑘, what is the exact form of the frequency′
+
+domain filter that should be applied before interpolation, so that the resulting 𝑓 is
+unaffected by aliasing? What is the corresponding kernel in the spatial domain?
+c. Implement both variations of image resizing, i.e. the naive approach (using only
+interpolation), and your approach with a filtering step. The filter should be implemented
+in the frequency domain. Show the results on an image with significant high-frequency
+detail, such as the barbara test image, with different values of 𝑘 = 1 / 2, 1 / 4, 1 / 8
+. To clearly see the effects, you may wish to zoom the image back to original size using
+nearest neighbour interpolation.
+(Note: In practical implementations of image resizing, the filtering step is performed in the spatial
+domain with a kernel of small width for performance reasons. You are asked to implement an ideal
+version in the frequency domain as a pedagogical exercise.)
+
+2. In an out-of-focus photograph, the point spread function (PSF) is typically a disk, because that
+is the shape of the camera’s aperture. However, one can take photographs with uniquely
+shaped blurs by modifying the aperture shape! One can simulate this on an existing image by
+convolving it with a desired PSF.
+a. Choose an image ℎ of size roughly 100-200 pixels in both directions, to use as a point
+spread function. Use intensity transformations if necessary to ensure that it consists of a
+bright shape on a black background. Using your resizing function from task 1, or a builtin function, create versions in different sizes, with the smallest being about 10 pixels in
+size, and normalize the intensities so they add up to 1.
+b. Perform blurring using convolution in the spatial domain, along with mirror padding.
+You may use a built-in convolution function, or your own implementation. Either way,
+take care that the kernel ℎ is treated as properly centered, i.e. its origin should be in the
+center and not the top-left corner. Demonstrate the results using the smallest version of
+ℎ on (i) an image that contains a few isolated impulses and is zero elsewhere, and (ii) a
+rectangular photograph of size on the order of 1000 × 2000.
+c. Implement the same blurring via multiplication in the frequency domain. You may use a
+built-in FFT implementation. Make sure you get nearly the same result as in part (b), up
+to floating-point rounding error. Also show the intermediate images, as in lectures 9 and
+10.
+d. Measure the compute time 𝑇(𝑟) of the implementations in (b) and (c) for all the
+different-sized versions of ℎ. Plot the timings of both methods on the same log-log plot,
+with the size of the kernel max (𝑚, 𝑛) on the x-axis.
+(Note: For visually attractive results in (b) and (c), try using a photograph containing some very
+bright points, e.g. a scene at night, convert it to a datatype with higher precision, and perform a
+gamma transformation with 𝛾 ≈ 2.2 before blurring and undo it afterwards.)
+
+Part 2
+The following three problems each have an optional task. If you are in a group of 2, you are required
+to complete one of the three optional tasks; if you are working individually, no optional task is
+required. In either case, doing one more optional task (on top of the 1 or 0 required) will give some
+extra marks; doing two more will not increase the marks further.
+3. In printing, the appearance of continuous shades of grey is created by printing small dots of
+black ink; this process is called halftone. Many scans of such halftone prints are available on
+Wikimedia Commons. Take one of these images, making sure to choose one where the haftone
+dots are clearly visible. If necessary, you may crop it to a reasonable size for easier processing.
+
+a. Visualize the Fourier spectrum of the image, without padding, and with the DC
+component centered. Report the locations of the spikes corresponding to the halftone
+dot pattern, and comment on the relationship between these frequencies and the
+spacing of the dots in the spatial domain.
+b. Using either a Gaussian or a Butterworth (𝑛 = 2) profile, construct a notch filter to
+remove these dots. Choose the width of the filter for best results, and show both the
+filtered frequency spectrum and the resulting image.
+c. Using the same width, change the profile to an ideal filter (i.e. a hard cutoff in the
+frequency domain) and show the spectrum and the filtered image again.
+d. Optional: Implement optimum notch filtering using the filter in (b) as a starting point. Be
+careful to choose a large enough neighbourhood size which spans at least a couple
+periods of the dot pattern. Show the estimated noise 𝜂 obtained from the notch filter,
+the intermediate values cov(𝑔, 𝜂) and var(𝜂) and the computed weight 𝑤, as well as
+the final result. Make sure you perform your computations in a datatype with sufficient
+precision!
+4. This problem is simply about evaluating some basic techniques’ effectiveness at denoising on
+some synthetic test cases. We will use two test images: 𝑐 being a constant image where each
+pixel has intensity 𝐼max / 2, and 𝑓 being a natural image of your choice.
+a. Create three noisy images from 𝑐, namely: 𝑐1 with additive uniform noise, 𝑐2 with
+additive Gaussian noise, and 𝑐3 with salt-and-pepper noise (equal probability of salt and
+pepper). In each case, choose the parameters of the noise so that PSNR = 20 dB. Do the
+same starting from 𝑓.
+b. Denoise each 𝑐𝑖 with an arithmetic mean filter of width 𝑤 = 2𝑎 + 1, and record the
+PSNR of the denoised image as a function of 𝑤. Do the same with a median filter, and
+make a single plot showing the PSNR of both methods with 𝑤 on the 𝑥 -axis. (You have
+get 3 plots total; one for each noise model.)
+c. Repeat task (b) with the noisy natural images 𝑓𝑖 . You should observe increase and then
+decrease with 𝑤; explain in your report why this is the case. Also show the denoised
+images with the best PSNR for both mean and median filtering.
+d. Optional: Implement a non-local means filter for higher-quality denoising, and
+demonstrate it on 𝑓𝑖 . You may wish to refer to the original paper for details. To improve
+performance, only consider contributions from pixels within a 3𝑚 × 3𝑚 “search
+window”, where 𝑚 × 𝑚 is the neighbourhood size. Experiment with different values of
+both parameters (neighbourhood size 𝑚, standard deviation 𝜎 ) for best results.
+
+5. Take one of your results from problem 2 with a large amount of blur. Add Gaussian noise with
+PSNR = 20 dB as in 4(a) to obtain the degraded image 𝑔. We will attempt to perform
+deconvolution and recover the original image 𝑓.
+a. Visualize the frequency bands of 𝑓 as follows: Let 𝑙0 , 𝑙1 , 𝑙2 , … be various low-pass
+filtered versions of 𝑓, with 𝑙𝑖 containing only those frequency components with
+
+𝑢, 𝑣 ∈ [ − 2𝑖 − 1 , 2𝑖 − 1 ] (so 𝑙0 contains only the DC component). Then compute the
+band-pass filtered images 𝑏 𝑖 = 𝑓𝑖 − 𝑓𝑖 − 1 for 𝑖 = 1, 2, … . Show l_1,l_2,$ and
+𝑏1 , 𝑏2 , … , adding 128 to the 𝑏𝑖 ’s since they have both positive and negative values. Do
+the same for 𝑔 and show the low-pass and band-pass filtered images.
+
+b. Apply an inverse filter in the frequency domain to get a (poorly) restored image. Show its
+frequency bands as in (a) and comment on how well different frequency bands are
+restored.
+c. To apply a Wiener filter, you will need to estimate 𝑆 𝜂 (𝑢, 𝑣) and 𝑆 𝑓 (𝑢, 𝑣). Making the
+assumption that 𝜂[𝑥, 𝑦] has zero mean and that |𝑁(𝑢, 𝑣)| is constant, use the
+Plancherel theorem to find 𝑆 𝜂 (𝑢, 𝑣) in terms of the noise variance 𝜎 . Using the same
+logic, find 𝑆 𝑓 (𝑢, 𝑣) in terms of ∥ 𝑓 ∥ assuming that |𝐹(𝑢, 𝑣)| is constant.
+d. Perform Wiener filtering assuming that 𝑆 𝜂 / 𝑆 𝑓 is a constant 𝐾 , and plot the PSNR of the
+^
+
+^
+
+restored image 𝑓 (i.e. using ∥ 𝑓 − 𝑓 ∥ in the denominator) for a range of values of 𝐾 .
+On the plot, mark the value of 𝐾 that corresponds to the estimates of 𝑆 𝜂 and 𝑆 𝑓
+obtained in (c). Show the restored image which has the highest PSNR, and also its
+frequency bands as in (a) and (b).
+e. So far we have used a degraded image 𝑔 with a small amount of noise (PSNR 20 dB).
+Repeat (d) with even less noise (PSNR 30 dB) and with more noise (PSNR 10 dB) and
+show the results.
+f. Optional: Work out how to perform regularized deconvolution when the regularizer is
+the
+
+squared
+^
+
+^
+
+gradient
+^
+
+2
+
+^
+
+norm,
+^
+
+2
+
+𝑅(𝑓) = ∑𝑥, 𝑦 ( (𝑓(𝑥 + 1, 𝑦) − 𝑓(𝑥)) + (𝑓(𝑥, 𝑦 + 1) − 𝑓(𝑥, 𝑦)) ) .
+^
+
+You
+
+will
+
+^
+
+have to evaluate 𝑅(𝑓) in terms of the Fourier transform 𝐹, and then find a closed-form
+^
+
+expression for the optimal 𝐹 similar to the derivation of the Wiener filter discussed in
+class. As in the previous tasks, plot the PSNR for a range of values of the regularization
+parameter 𝜆, and show the best resulting image.
+
+Submission
+
+You will submit a zip file that contains (i) all your code for the assignment, (ii) a PDF report that
+includes your results for each of the assignment problems. In the text of the report, also provide all
+relevant information for each part.
+All images should ideally be saved in PNG format, which is lossless and so does not cause any
+information loss (other than quantization if the intensities are not already in 8-bit format). JPEG is
+permitted if your submission PDF is becoming too big for the upload limit.
+Your assignment should be submitted on Moodle (old) before midnight on the due date. Only one
+person in a group needs to submit. Late days are counted with a quantization of 0.5 days: if you
+cannot finish the assignment by midnight, get some sleep and submit by noon the following day.
+Separately, each of you must individually submit a short response in a separate form regarding how
+much you and your partner contributed to the work in this assignment. Your assignment marks will
+not be released until you submit the form.
+
+

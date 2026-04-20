@@ -1,0 +1,12 @@
+Image: f2
+Size: 294x522x3
+Error std dev: 13.7406
+Error entropy: 4.9401 bits/pixel
+LZW codewords: 146930
+LZW entropy: 13.9920 bits/symbol
+Huffman avg length: 14.0197 bits/symbol
+Prediction ratio: 1.6194x
+LZW ratio: 3.1335x
+Overall ratio: 1.7880x
+Original size: 460404 bytes
+Compressed size: 257490 bytes

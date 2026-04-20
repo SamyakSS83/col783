@@ -1,0 +1,513 @@
+Image shape: (748, 493)
+Saved: results/00_original_image.png
+
+=== Part (a): Fourier Spectrum Analysis ===
+Saved: results/01_fft_spectrum.png
+
+Selected spike locations (row, col):
+  Spike 1: (199, 120)
+  Spike 2: (286, 183)
+  Spike 3: (376, 125)
+  Spike 4: (474, 183)
+  Spike 5: (562, 132)
+  Spike 6: (193, 243)
+  Spike 7: (468, 77)
+  Spike 8: (283, 63)
+  Spike 9: (113, 65)
+  Spike 10: (109, 183)
+  Spike 11: (654, 188)
+  Spike 12: (656, 57)
+
+--- Spatial Domain Analysis ---
+Image shape: (748, 493)
+Spectrum center: (374, 246)
+
+Spike 1:
+  Offset from center: (-175, -126)
+  Distance: 215.64 pixels
+  Angle: -125.75 degrees
+  Corresponding spatial period: ~3.47 pixels
+
+Spike 2:
+  Offset from center: (-88, -63)
+  Distance: 108.23 pixels
+  Angle: -125.60 degrees
+  Corresponding spatial period: ~6.91 pixels
+
+Spike 3:
+  Offset from center: (2, -121)
+  Distance: 121.02 pixels
+  Angle: 179.05 degrees
+  Corresponding spatial period: ~6.18 pixels
+
+Spike 4:
+  Offset from center: (100, -63)
+  Distance: 118.19 pixels
+  Angle: 122.21 degrees
+  Corresponding spatial period: ~6.33 pixels
+
+Spike 5:
+  Offset from center: (188, -114)
+  Distance: 219.86 pixels
+  Angle: 121.23 degrees
+  Corresponding spatial period: ~3.40 pixels
+
+Spike 6:
+  Offset from center: (-181, -3)
+  Distance: 181.02 pixels
+  Angle: -90.95 degrees
+  Corresponding spatial period: ~4.13 pixels
+
+Spike 7:
+  Offset from center: (94, -169)
+  Distance: 193.38 pixels
+  Angle: 150.92 degrees
+  Corresponding spatial period: ~3.87 pixels
+
+Spike 8:
+  Offset from center: (-91, -183)
+  Distance: 204.38 pixels
+  Angle: -153.56 degrees
+  Corresponding spatial period: ~3.66 pixels
+
+Spike 9:
+  Offset from center: (-261, -181)
+  Distance: 317.62 pixels
+  Angle: -124.74 degrees
+  Corresponding spatial period: ~2.36 pixels
+
+Spike 10:
+  Offset from center: (-265, -63)
+  Distance: 272.39 pixels
+  Angle: -103.37 degrees
+  Corresponding spatial period: ~2.75 pixels
+
+Spike 11:
+  Offset from center: (280, -58)
+  Distance: 285.94 pixels
+  Angle: 101.70 degrees
+  Corresponding spatial period: ~2.62 pixels
+
+Spike 12:
+  Offset from center: (282, -189)
+  Distance: 339.48 pixels
+  Angle: 123.83 degrees
+  Corresponding spatial period: ~2.20 pixels
+
+--- Pattern Displacement Vectors ---
+  Spike 1 to Spike 2: (87, 63)
+  Spike 1 to Spike 3: (177, 5)
+  Spike 1 to Spike 4: (275, 63)
+  Spike 1 to Spike 5: (363, 12)
+  Spike 1 to Spike 6: (-6, 123)
+  Spike 1 to Spike 7: (269, -43)
+  Spike 1 to Spike 8: (84, -57)
+  Spike 1 to Spike 9: (-86, -55)
+  Spike 1 to Spike 10: (-90, 63)
+  Spike 1 to Spike 11: (455, 68)
+  Spike 1 to Spike 12: (457, -63)
+  Spike 2 to Spike 3: (90, -58)
+  Spike 2 to Spike 4: (188, 0)
+  Spike 2 to Spike 5: (276, -51)
+  Spike 2 to Spike 6: (-93, 60)
+  Spike 2 to Spike 7: (182, -106)
+  Spike 2 to Spike 8: (-3, -120)
+  Spike 2 to Spike 9: (-173, -118)
+  Spike 2 to Spike 10: (-177, 0)
+  Spike 2 to Spike 11: (368, 5)
+  Spike 2 to Spike 12: (370, -126)
+  Spike 3 to Spike 4: (98, 58)
+  Spike 3 to Spike 5: (186, 7)
+  Spike 3 to Spike 6: (-183, 118)
+  Spike 3 to Spike 7: (92, -48)
+  Spike 3 to Spike 8: (-93, -62)
+  Spike 3 to Spike 9: (-263, -60)
+  Spike 3 to Spike 10: (-267, 58)
+  Spike 3 to Spike 11: (278, 63)
+  Spike 3 to Spike 12: (280, -68)
+  Spike 4 to Spike 5: (88, -51)
+  Spike 4 to Spike 6: (-281, 60)
+  Spike 4 to Spike 7: (-6, -106)
+  Spike 4 to Spike 8: (-191, -120)
+  Spike 4 to Spike 9: (-361, -118)
+  Spike 4 to Spike 10: (-365, 0)
+  Spike 4 to Spike 11: (180, 5)
+  Spike 4 to Spike 12: (182, -126)
+  Spike 5 to Spike 6: (-369, 111)
+  Spike 5 to Spike 7: (-94, -55)
+  Spike 5 to Spike 8: (-279, -69)
+  Spike 5 to Spike 9: (-449, -67)
+  Spike 5 to Spike 10: (-453, 51)
+  Spike 5 to Spike 11: (92, 56)
+  Spike 5 to Spike 12: (94, -75)
+  Spike 6 to Spike 7: (275, -166)
+  Spike 6 to Spike 8: (90, -180)
+  Spike 6 to Spike 9: (-80, -178)
+  Spike 6 to Spike 10: (-84, -60)
+  Spike 6 to Spike 11: (461, -55)
+  Spike 6 to Spike 12: (463, -186)
+  Spike 7 to Spike 8: (-185, -14)
+  Spike 7 to Spike 9: (-355, -12)
+  Spike 7 to Spike 10: (-359, 106)
+  Spike 7 to Spike 11: (186, 111)
+  Spike 7 to Spike 12: (188, -20)
+  Spike 8 to Spike 9: (-170, 2)
+  Spike 8 to Spike 10: (-174, 120)
+  Spike 8 to Spike 11: (371, 125)
+  Spike 8 to Spike 12: (373, -6)
+  Spike 9 to Spike 10: (-4, 118)
+  Spike 9 to Spike 11: (541, 123)
+  Spike 9 to Spike 12: (543, -8)
+  Spike 10 to Spike 11: (545, 5)
+  Spike 10 to Spike 12: (547, -126)
+  Spike 11 to Spike 12: (2, -131)
+
+--- Generated Symmetric Spike Pattern ---
+Original spikes: 12
+Total spikes (including symmetric): 24
+All spike locations:
+  Spike 1: (92, 435), offset: (-282, 189)
+  Spike 2: (94, 304), offset: (-280, 58)
+  Spike 3: (109, 183), offset: (-265, -63)
+  Spike 4: (113, 65), offset: (-261, -181)
+  Spike 5: (186, 360), offset: (-188, 114)
+  Spike 6: (193, 243), offset: (-181, -3)
+  Spike 7: (199, 120), offset: (-175, -126)
+  Spike 8: (274, 309), offset: (-100, 63)
+  Spike 9: (280, 415), offset: (-94, 169)
+  Spike 10: (283, 63), offset: (-91, -183)
+  Spike 11: (286, 183), offset: (-88, -63)
+  Spike 12: (372, 367), offset: (-2, 121)
+  Spike 13: (376, 125), offset: (2, -121)
+  Spike 14: (462, 309), offset: (88, 63)
+  Spike 15: (465, 429), offset: (91, 183)
+  Spike 16: (468, 77), offset: (94, -169)
+  Spike 17: (474, 183), offset: (100, -63)
+  Spike 18: (549, 372), offset: (175, 126)
+  Spike 19: (555, 249), offset: (181, 3)
+  Spike 20: (562, 132), offset: (188, -114)
+  Spike 21: (635, 427), offset: (261, 181)
+  Spike 22: (639, 309), offset: (265, 63)
+  Spike 23: (654, 188), offset: (280, -58)
+  Spike 24: (656, 57), offset: (282, -189)
+Saved: results/02_spectrum_all_spikes_marked.png
+
+=== Part (b): Notch Filter (Gaussian) ===
+Saved: results/03_gaussian_notch_spectrum.png
+Saved: results/04_gaussian_filter_mask.png
+Saved: results/05_gaussian_filtered_image.png
+Saved: results/06_gaussian_comparison.png
+
+=== Part (c): Ideal Notch Filter ===
+Saved: results/07_ideal_notch_spectrum.png
+Saved: results/08_ideal_filter_mask.png
+Saved: results/09_ideal_filtered_image.png
+Saved: results/10_ideal_comparison.png
+
+=== Part (d): Optimum Notch Filtering ===
+
+--- Optimum Notch Filtering ---
+Using 24 spike locations for filtering
+Neighborhood size: 31x31
+Noise estimate η statistics:
+  Mean: 0.025784
+  Std: 25.280616
+  Variance: 639.109553
+Computing optimum weights for each pixel...
+  Processing row 0/748
+  Processing row 50/748
+  Processing row 100/748
+  Processing row 150/748
+  Processing row 200/748
+  Processing row 250/748
+  Processing row 300/748
+  Processing row 350/748
+  Processing row 400/748
+  Processing row 450/748
+  Processing row 500/748
+  Processing row 550/748
+  Processing row 600/748
+  Processing row 650/748
+  Processing row 700/748
+
+Sample computation (first pixel):
+  cov(g, η) = 1718.733214
+  var(η) = 1439.863824
+  w = 1.000000
+
+Weight statistics across image:
+  Mean weight: 0.996797
+  Std weight: 0.030209
+  Min weight: 0.387560
+  Max weight: 1.000000
+Saved: results/11_noise_estimate.png
+Saved: results/12_weight_map.png
+Saved: results/13_optimum_filtered_image.png
+Saved: results/14_optimum_all_results.png
+Saved: results/15_all_methods_comparison.png
+
+=== Processing Complete ===
+All results saved in 'results/' directory
+(venv) kashishgoel@KASHISHs-MacBook-Air-1048 part 3 % python3 filtering.py
+Image shape: (748, 493)
+Saved: results/00_original_image.png
+
+=== Part (a): Fourier Spectrum Analysis ===
+Saved: results/01_fft_spectrum.png
+
+Selected spike locations (row, col):
+
+--- Spatial Domain Analysis ---
+Image shape: (748, 493)
+Spectrum center: (374, 246)
+
+Spike 1:
+  Offset from center: (-174, -124)
+  Distance: 213.66 pixels
+  Angle: -125.48 degrees
+  Corresponding spatial period: ~3.50 pixels
+
+Spike 2:
+  Offset from center: (-178, -2)
+  Distance: 178.01 pixels
+  Angle: -90.64 degrees
+  Corresponding spatial period: ~4.20 pixels
+
+Spike 3:
+  Offset from center: (-271, -185)
+  Distance: 328.12 pixels
+  Angle: -124.32 degrees
+  Corresponding spatial period: ~2.28 pixels
+
+Spike 4:
+  Offset from center: (-270, -61)
+  Distance: 276.80 pixels
+  Angle: -102.73 degrees
+  Corresponding spatial period: ~2.70 pixels
+
+Spike 5:
+  Offset from center: (-86, -62)
+  Distance: 106.02 pixels
+  Angle: -125.79 degrees
+  Corresponding spatial period: ~7.06 pixels
+
+Spike 6:
+  Offset from center: (9, -117)
+  Distance: 117.35 pixels
+  Angle: 175.60 degrees
+  Corresponding spatial period: ~6.37 pixels
+
+Spike 7:
+  Offset from center: (-90, -186)
+  Distance: 206.63 pixels
+  Angle: -154.18 degrees
+  Corresponding spatial period: ~3.62 pixels
+
+Spike 8:
+  Offset from center: (94, -182)
+  Distance: 204.84 pixels
+  Angle: 152.68 degrees
+  Corresponding spatial period: ~3.65 pixels
+
+Spike 9:
+  Offset from center: (97, -58)
+  Distance: 113.02 pixels
+  Angle: 120.88 degrees
+  Corresponding spatial period: ~6.62 pixels
+
+Spike 10:
+  Offset from center: (186, -113)
+  Distance: 217.64 pixels
+  Angle: 121.28 degrees
+  Corresponding spatial period: ~3.44 pixels
+
+Spike 11:
+  Offset from center: (273, -57)
+  Distance: 278.89 pixels
+  Angle: 101.79 degrees
+  Corresponding spatial period: ~2.68 pixels
+
+Spike 12:
+  Offset from center: (280, -184)
+  Distance: 335.05 pixels
+  Angle: 123.31 degrees
+  Corresponding spatial period: ~2.23 pixels
+
+--- Pattern Displacement Vectors ---
+  Spike 1 to Spike 2: (-4, 122)
+  Spike 1 to Spike 3: (-97, -61)
+  Spike 1 to Spike 4: (-96, 63)
+  Spike 1 to Spike 5: (88, 62)
+  Spike 1 to Spike 6: (183, 7)
+  Spike 1 to Spike 7: (84, -62)
+  Spike 1 to Spike 8: (268, -58)
+  Spike 1 to Spike 9: (271, 66)
+  Spike 1 to Spike 10: (360, 11)
+  Spike 1 to Spike 11: (447, 67)
+  Spike 1 to Spike 12: (454, -60)
+  Spike 2 to Spike 3: (-93, -183)
+  Spike 2 to Spike 4: (-92, -59)
+  Spike 2 to Spike 5: (92, -60)
+  Spike 2 to Spike 6: (187, -115)
+  Spike 2 to Spike 7: (88, -184)
+  Spike 2 to Spike 8: (272, -180)
+  Spike 2 to Spike 9: (275, -56)
+  Spike 2 to Spike 10: (364, -111)
+  Spike 2 to Spike 11: (451, -55)
+  Spike 2 to Spike 12: (458, -182)
+  Spike 3 to Spike 4: (1, 124)
+  Spike 3 to Spike 5: (185, 123)
+  Spike 3 to Spike 6: (280, 68)
+  Spike 3 to Spike 7: (181, -1)
+  Spike 3 to Spike 8: (365, 3)
+  Spike 3 to Spike 9: (368, 127)
+  Spike 3 to Spike 10: (457, 72)
+  Spike 3 to Spike 11: (544, 128)
+  Spike 3 to Spike 12: (551, 1)
+  Spike 4 to Spike 5: (184, -1)
+  Spike 4 to Spike 6: (279, -56)
+  Spike 4 to Spike 7: (180, -125)
+  Spike 4 to Spike 8: (364, -121)
+  Spike 4 to Spike 9: (367, 3)
+  Spike 4 to Spike 10: (456, -52)
+  Spike 4 to Spike 11: (543, 4)
+  Spike 4 to Spike 12: (550, -123)
+  Spike 5 to Spike 6: (95, -55)
+  Spike 5 to Spike 7: (-4, -124)
+  Spike 5 to Spike 8: (180, -120)
+  Spike 5 to Spike 9: (183, 4)
+  Spike 5 to Spike 10: (272, -51)
+  Spike 5 to Spike 11: (359, 5)
+  Spike 5 to Spike 12: (366, -122)
+  Spike 6 to Spike 7: (-99, -69)
+  Spike 6 to Spike 8: (85, -65)
+  Spike 6 to Spike 9: (88, 59)
+  Spike 6 to Spike 10: (177, 4)
+  Spike 6 to Spike 11: (264, 60)
+  Spike 6 to Spike 12: (271, -67)
+  Spike 7 to Spike 8: (184, 4)
+  Spike 7 to Spike 9: (187, 128)
+  Spike 7 to Spike 10: (276, 73)
+  Spike 7 to Spike 11: (363, 129)
+  Spike 7 to Spike 12: (370, 2)
+  Spike 8 to Spike 9: (3, 124)
+  Spike 8 to Spike 10: (92, 69)
+  Spike 8 to Spike 11: (179, 125)
+  Spike 8 to Spike 12: (186, -2)
+  Spike 9 to Spike 10: (89, -55)
+  Spike 9 to Spike 11: (176, 1)
+  Spike 9 to Spike 12: (183, -126)
+  Spike 10 to Spike 11: (87, 56)
+  Spike 10 to Spike 12: (94, -71)
+  Spike 11 to Spike 12: (7, -127)
+
+--- Generated Symmetric Spike Pattern ---
+Original spikes: 12
+Total spikes (including symmetric): 24
+All spike locations:
+  Spike 1: (94, 430), offset: (-280, 184)
+  Spike 2: (101, 303), offset: (-273, 57)
+  Spike 3: (103, 61), offset: (-271, -185)
+  Spike 4: (104, 185), offset: (-270, -61)
+  Spike 5: (188, 359), offset: (-186, 113)
+  Spike 6: (196, 244), offset: (-178, -2)
+  Spike 7: (200, 122), offset: (-174, -124)
+  Spike 8: (277, 304), offset: (-97, 58)
+  Spike 9: (280, 428), offset: (-94, 182)
+  Spike 10: (284, 60), offset: (-90, -186)
+  Spike 11: (288, 184), offset: (-86, -62)
+  Spike 12: (365, 363), offset: (-9, 117)
+  Spike 13: (383, 129), offset: (9, -117)
+  Spike 14: (460, 308), offset: (86, 62)
+  Spike 15: (464, 432), offset: (90, 186)
+  Spike 16: (468, 64), offset: (94, -182)
+  Spike 17: (471, 188), offset: (97, -58)
+  Spike 18: (548, 370), offset: (174, 124)
+  Spike 19: (552, 248), offset: (178, 2)
+  Spike 20: (560, 133), offset: (186, -113)
+  Spike 21: (644, 307), offset: (270, 61)
+  Spike 22: (645, 431), offset: (271, 185)
+  Spike 23: (647, 189), offset: (273, -57)
+  Spike 24: (654, 62), offset: (280, -184)
+  Spike 1: (94, 430)
+  Spike 2: (101, 303)
+  Spike 3: (103, 61)
+  Spike 4: (104, 185)
+  Spike 5: (188, 359)
+  Spike 6: (196, 244)
+  Spike 7: (200, 122)
+  Spike 8: (277, 304)
+  Spike 9: (280, 428)
+  Spike 10: (284, 60)
+  Spike 11: (288, 184)
+  Spike 12: (365, 363)
+  Spike 13: (383, 129)
+  Spike 14: (460, 308)
+  Spike 15: (464, 432)
+  Spike 16: (468, 64)
+  Spike 17: (471, 188)
+  Spike 18: (548, 370)
+  Spike 19: (552, 248)
+  Spike 20: (560, 133)
+  Spike 21: (644, 307)
+  Spike 22: (645, 431)
+  Spike 23: (647, 189)
+  Spike 24: (654, 62)
+Saved: results/02_spectrum_all_spikes_marked.png
+
+=== Part (b): Notch Filter (Gaussian) ===
+Saved: results/03_gaussian_notch_spectrum.png
+Saved: results/04_gaussian_filter_mask.png
+Saved: results/05_gaussian_filtered_image.png
+Saved: results/06_gaussian_comparison.png
+^[[1;2A^[[1;2A
+=== Part (c): Ideal Notch Filter ===
+Saved: results/07_ideal_notch_spectrum.png
+Saved: results/08_ideal_filter_mask.png
+Saved: results/09_ideal_filtered_image.png
+Saved: results/10_ideal_comparison.png
+
+=== Part (d): Optimum Notch Filtering ===
+
+--- Optimum Notch Filtering ---
+Using 24 spike locations for filtering
+Neighborhood size: 31x31
+Noise estimate η statistics:
+  Mean: 0.042575
+  Std: 25.832762
+  Variance: 667.331615
+Computing optimum weights for each pixel...
+  Processing row 0/748
+  Processing row 50/748
+  Processing row 100/748
+  Processing row 150/748
+  Processing row 200/748
+  Processing row 250/748
+  Processing row 300/748
+  Processing row 350/748
+  Processing row 400/748
+  Processing row 450/748
+  Processing row 500/748
+  Processing row 550/748
+  Processing row 600/748
+  Processing row 650/748
+  Processing row 700/748
+
+Sample computation (first pixel):
+  cov(g, η) = 1743.173467
+  var(η) = 1472.844200
+  w = 1.000000
+
+Weight statistics across image:
+  Mean weight: 0.996799
+  Std weight: 0.028969
+  Min weight: 0.420953
+  Max weight: 1.000000
+Saved: results/11_noise_estimate.png
+Saved: results/12_weight_map.png
+Saved: results/13_optimum_filtered_image.png
+Saved: results/14_optimum_all_results.png
+Saved: results/15_all_methods_comparison.png
+
+=== Processing Complete ===
+All results saved in 'results/' directory

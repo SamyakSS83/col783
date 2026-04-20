@@ -1,0 +1,47 @@
+  Original PSF size: 600×600
+  Inverted PSF (was dark on bright background)
+  Created psf_10.png
+  Created psf_20.png
+  Created psf_40.png
+  Created psf_80.png
+  Created psf_160.png
+  Saved mirror-padded image: impulse_mirror_padded.png
+Spatial domain time: 0.0647 seconds
+Frequency domain time: 0.0664 seconds
+Maximum difference between methods: 1.39e-17
+Saved: blur_comparison_impulse.png
+  Loaded test_test.png - Original size: (1024, 1024)
+Applying gamma transformation (γ=2.2) for better visual results...
+  Saved mirror-padded image: photo_mirror_padded.png
+Spatial domain time: 0.1498 seconds
+Frequency domain time: 0.1530 seconds
+Undoing gamma transformation...
+Maximum difference between methods: 4.22e-01
+Saved: blur_comparison_photo.png
+
+Testing with PSF size 10×10...
+  Spatial domain: 0.0787s
+  Frequency domain: 0.0564s
+  Speedup: 1.40x
+
+Testing with PSF size 20×20...
+  Spatial domain: 0.2373s
+  Frequency domain: 0.0544s
+  Speedup: 4.36x
+
+Testing with PSF size 40×40...
+  Spatial domain: 0.8285s
+  Frequency domain: 0.0555s
+  Speedup: 14.92x
+
+Testing with PSF size 80×80...
+  Spatial domain: 3.1779s
+  Frequency domain: 0.0577s
+  Speedup: 55.04x
+
+Testing with PSF size 160×160...
+  Spatial domain: 13.9489s
+  Frequency domain: 0.0568s
+  Speedup: 245.40x
+
+Saved: timing_comparison.png

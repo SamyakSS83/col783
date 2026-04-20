@@ -1,0 +1,10 @@
+Image: f1
+Per-row entropy: 0.6897 bits/pixel
+Per-row + LZW ratio: 23.3331x
+Per-row + RLE ratio: 15.5776x
+
+Predictor usage:
+  left: 6 rows (1.0%)
+  up: 340 rows (55.2%)
+  avg: 3 rows (0.5%)
+  paeth: 267 rows (43.3%)
